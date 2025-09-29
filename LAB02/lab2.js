@@ -43,6 +43,7 @@ prompt.get([{
     const computerSelection = getComputerChoice();
 
     // Step 5: Print userSelection and ComputerChoice using console.log()
+    // Debug ref: https://stackoverflow.com/questions/64552472/what-determines-whether-node-prints-object-object-or-a-full-object
     console.log(`You chose: ${userSelection}`);
     console.log(`Computer chose: ${computerSelection}`);
 
