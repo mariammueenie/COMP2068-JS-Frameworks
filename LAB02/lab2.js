@@ -1,7 +1,7 @@
 // LAB02 - Rock, Paper, Scissors Game
 
 // Step 1: Start game.
-var prompt = require('prompt');
+const prompt = require('prompt');
 prompt.start();
 
 // Step 2: Generate computer choice using Math.random()
@@ -38,11 +38,15 @@ prompt.get([{
         return;
     }
 
-    // Retrieve userSelection and ComputerChoice
+    // Step 4: Retrieve userSelection and ComputerChoice
+    const userSelection = result.userSelection.toLowerCase(); // convert to lowercase
+    const computerSelection = getComputerChoice();
 
-    // Print userSelection and ComputerChoice using console.log()
+    // Step 5: Print userSelection and ComputerChoice using console.log()
+    console.log(`You chose: ${userSelection}`);
+    console.log(`Computer chose: ${computerSelection}`);
 
-    // Compare userSelection with ComputerChoise to determine winner, and display results.
+    // Step 6: Compare userSelection with ComputerChoice to determine winner, and display results.
 });
 
 
