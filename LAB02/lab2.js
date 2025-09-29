@@ -48,6 +48,24 @@ prompt.get([{
     console.log(`Computer chose: ${computerSelection}`);
 
     // Step 6: Compare userSelection with ComputerChoice to determine winner, and display results.
+    // using if, else if, else statements to determine winner
+
+    // Tie in this condition.
+    if (userSelection === computerSelection) {
+        console.log("It's a tie!");
+
+    // User wins in these conditions.
+    } else if (
+        (userSelection === 'rock' && computerSelection === 'scissors') ||
+        (userSelection === 'paper' && computerSelection === 'rock') ||
+        (userSelection === 'scissors' && computerSelection === 'paper')     
+    ) {
+        console.log("User wins!");
+
+    // Computer wins in all other conditions.
+    } else {
+        console.log("Computer wins!");
+    }
 });
 
 
