@@ -1,4 +1,8 @@
 // LAB02 - Rock, Paper, Scissors Game
+// By: Mariam Mueen 
+    // Date: 2024-09-14
+    // email: 200606351@student.georgianc.on.ca
+    // COMP2068(02) - JavaScript Frameworks
 
 // Step 1: Start game.
 const prompt = require('prompt');
@@ -9,6 +13,7 @@ prompt.start();
     // 0.00-0.34 = PAPER
     // 0.35-0.67 = SCISSORS
     // 0.68-1.00 = ROCK
+    // Debug Ref: https://www.w3schools.com/js/js_random.asp
 function getComputerChoice() {
     const randomNum = Math.random(); // generated random number between 0-1
 
@@ -23,9 +28,10 @@ function getComputerChoice() {
 }
 
 // Step 3: Ask user for their input, using prompt().
-// Get user to choose between rock, paper, or scissors
-// Response will be stored as userSelection 
-// makes it so that user can only choose rock, paper, or scissors
+    // Get user to choose between rock, paper, or scissors
+    // Response will be stored as userSelection 
+    // makes it so that user can only choose rock, paper, or scissors
+    // Ref: https://www.npmjs.com/package/prompt?activeTab=readme
 prompt.get([{
     name: 'userSelection',
     description: 'Choose rock, paper, or scissors',
