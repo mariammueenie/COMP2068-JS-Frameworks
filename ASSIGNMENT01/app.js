@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// add 'year' helper for HTML
+app.locals.year = new Date().getFullYear();
+
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 
