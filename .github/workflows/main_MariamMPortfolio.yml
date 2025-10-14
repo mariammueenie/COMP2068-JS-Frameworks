@@ -2,8 +2,7 @@ name: Build and deploy Node.js app to Azure Web App - MariamMPortfolio
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -23,13 +22,17 @@ jobs:
 
       # Optional sanity check (no build needed for Express)
       - name: Validate package presence
-        run: test -f Assignment01/package.json
+        run: test -f ASSIGNMENT01/package.json
+
+      # Optional sanity check to pre-warn for errors 
+      - name: Install dependencies (optional)
+        run: npm ci --prefix ASSIGNMENT01
 
       - name: Deploy to Azure Web App (Publish Profile)
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'MariamMPortfolio'            # <-- keep exact casing
           slot-name: 'Production'
-          package: Assignment01                    # <-- subfolder to deploy
+          package: ASSIGNMENT01                    # <-- subfolder to deploy
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
 
