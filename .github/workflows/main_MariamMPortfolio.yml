@@ -24,6 +24,10 @@ jobs:
       - name: Validate package presence
         run: test -f ASSIGNMENT01/package.json
 
+      # Optional sanity check to pre-warn for errors 
+      - name: Install dependencies (optional)
+        run: npm ci --prefix ASSIGNMENT01
+
       - name: Deploy to Azure Web App (Publish Profile)
         uses: azure/webapps-deploy@v3
         with:
