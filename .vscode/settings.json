@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/4280d0f3-5695-4364-9911-42260e976930/resourceGroups/rg-COMP2068-portfolio/providers/Microsoft.Web/sites/MariamMPortfolio",
+    "appService.deploySubpath": "ASSIGNMENT01"
+}
