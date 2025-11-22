@@ -4,11 +4,68 @@ That way, I can come back and reference this if ever needed
 
 So, step 1
 
-1. Open folder in which you want to build project-spa-backend (single page application)
-    a. open new terminal
-    b. ensure Express Generator is installed on your machine 
-        check using: `npx express-generator` 
-        if not installed: `npm install -g express-generator`
-                          `npm start'
-    c. once installed, restart VS Code, then type
-       'npx express-generator project-spa-backend --view hbs`
+1. Create project-spa-backend
+
+    Open folder in which you want to build project-spa-backend (single page application)
+        open new terminal
+        ensure Express Generator is installed on your machine 
+            check using: `npx express-generator` 
+            if not installed: `npm install -g express-generator`
+                            `npm start'
+        once installed, restart VS Code, then type
+        'npx express-generator project-spa-backend --view hbs`
+
+2. Create project-spa-frontend
+
+    Open folder in which you want to create project-spa-frontend
+        Check if you have Angular CLI installed using 
+            `ng version`
+        If you have, great! If not, type;
+            `npm install -g@angular/cli`
+        This will install Angular CLI tools and the global `ng` command
+        May take 1-3 minutes
+        After installing, verify;
+            `ng version`
+
+    In project folder, in terminal, type out
+        `ng new project-spa-frontend --no-standalone`
+            The reason we are using the `--no-standalone` comment is so that we can use
+            we want to use a specific project template for this project (Angular)
+            Without this line, the project would be configured using standalone components,
+            which is fine for smaller projects, but we want to use templates. 
+    When prompted, select 'css style sheet'
+    When prompted, select 'N' for Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)
+    When prompted, select 'N' for AI.
+
+    The packages will then install. This may take a few minutes.
+
+3. Clear output in terminal;
+    `clear`
+
+---
+Congrats! Now both your project templates have been made.
+---
+
+4. Navigate to project-spa-backend.
+    Open project-spa-backend folder in code editing software
+    Open project-spa-backend folder in terminal 
+        `cd .\project-spa-backend`
+
+5. Restore dependencies 
+
+    Type the following to see how many vulnerabilities exist;
+        `npm i`
+    The terminal should display vulnerabilities, ranging from Low -> Critical.
+    To address these issues, type;
+        `npm audit fix --force`
+    or
+        `npm audit`
+    for details. 
+    Continue like this, until you have 0 vulnerabilities.
+
+6. Test application using nodemon 
+    We are going to test application using nodemon.
+    Typethe following in terminal to test;
+        `nodemon` 
+
+   
