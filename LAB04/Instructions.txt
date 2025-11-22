@@ -1,0 +1,14 @@
+Hello, this file is just me writing down steps as I go
+
+That way, I can come back and reference this if ever needed 
+
+So, step 1
+
+1. Open folder in which you want to build project-spa-backend (single page application)
+    a. open new terminal
+    b. ensure Express Generator is installed on your machine 
+        check using: `npx express-generator` 
+        if not installed: `npm install -g express-generator`
+                          `npm start'
+    c. once installed, restart VS Code, then type
+       'npx express-generator project-spa-backend --view hbs`
