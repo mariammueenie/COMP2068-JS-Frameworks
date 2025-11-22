@@ -2,7 +2,18 @@ Hello, this file is just me writing down steps as I go
 
 That way, I can come back and reference this if ever needed 
 
-So, step 1
+------------------
+Assignment Instructions from Prof
+
+In this lab you will create an SPA using Angular frontend and Express backend.
+Follow the instructions in this recorded session: 
+    https://www.youtube.com/watch?v=dMRN9cZly2E
+Refer to the readme file for step-by-step instructions: 
+    https://github.com/eduardojaime/COMP2068JavaScriptFrameworks/blob/master/lesson10/README.md
+
+Deliverables
+    Upload your code to LAB04 folder in your class repo.
+    Provide the link to your repo below.
 
 1. Create project-spa-backend
 
@@ -65,7 +76,13 @@ Congrats! Now both your project templates have been made.
 
 6. Test application using nodemon 
     We are going to test application using nodemon.
-    Typethe following in terminal to test;
+    Type the following in terminal to test;
         `nodemon` 
+    As long as that runs successfully, go to web browser and type in address bar:
+        `localhost:3000`
+    You should see welcome page, titled Express, with subtitle, Welcome to Express.
+    This means your project template is working. 
+    We are going to leave this running in its terminal.
+
 
    

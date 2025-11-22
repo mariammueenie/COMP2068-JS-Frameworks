@@ -1,0 +1,14 @@
+Instructions 
+
+---------
+Assignment Instructions from Prof
+
+In this lab you will complete the SPA using Angular frontend and Express backend.
+Follow the instructions in this recorded session: 
+    https://www.youtube.com/watch?v=MPFP96BCLUE
+Refer to the readme file for step-by-step instructions: 
+    https://github.com/eduardojaime/COMP2068JavaScriptFrameworks/blob/master/lesson11/README.md
+
+Deliverables
+    Upload your code to LAB05 folder in your class repo.
+    Provide the link to your repo below.
