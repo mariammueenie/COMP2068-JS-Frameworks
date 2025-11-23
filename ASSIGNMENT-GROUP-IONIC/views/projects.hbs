@@ -1,0 +1,113 @@
+
+{{!-- TODO: Add Ionic components here (chips, cards, segments) --}}
+{{!--
+  Projects page.
+  This view:
+  - Receives a "projects" array from routes/projects.js
+  - Renders each project with data-* attributes used for filtering
+  - Provides an Ionic-based filter toolbar (chips) that the
+    front-end script (projects-filter.js) can hook into.
+--}}
+
+<h1 class="mb-4">Projects</h1>
+<p class="mb-4">
+  Below is a selection of Jane Doe’s portfolio projects. You can use the
+  filter chips to narrow projects by language, concept, or type
+  (frontend / backend / fullstack). This is designed to be a nice
+  foundation for an Ionic-based demo.
+</p>
+
+<!-- Filter Toolbar -->
+<!--
+  These <ion-chip> elements act as filter controls.
+  Each chip has:
+  - data-filter: which category it belongs to (language/concept/type)
+  - data-value: the value to filter by
+  The projects-filter.js script listens for clicks on these chips and
+  shows/hides projects accordingly.
+-->
+<section class="mb-4">
+  <h5 class="mb-3">Filter by Language</h5>
+  <ion-chip class="filter-chip" data-filter="language" data-value="JavaScript">
+    JavaScript
+  </ion-chip>
+</section>
+
+<section class="mb-4">
+  <h5 class="mb-3">Filter by Concept</h5>
+  <ion-chip class="filter-chip" data-filter="concept" data-value="REST API">
+    REST API
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="concept" data-value="Data Visualization">
+    Data Visualization
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="concept" data-value="Forms">
+    Forms
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="concept" data-value="Fetch API">
+    Fetch API
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="concept" data-value="Animations">
+    Animations
+  </ion-chip>
+</section>
+
+<section class="mb-4">
+  <h5 class="mb-3">Filter by Type</h5>
+  <ion-chip class="filter-chip" data-filter="type" data-value="Frontend">
+    Frontend
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="type" data-value="Backend">
+    Backend
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="type" data-value="Fullstack">
+    Fullstack
+  </ion-chip>
+  <ion-chip class="filter-chip" data-filter="type" data-value="API">
+    API
+  </ion-chip>
+</section>
+
+<!-- Projects List -->
+<!--
+  We loop over the "projects" array and create one list item per project.
+  Each item includes:
+  - Name and description
+  - A human-readable list of tags
+  - data-* attributes that the filter script can read
+-->
+<ul id="project-list" class="list-group">
+  {{#each projects}}
+    <li
+      class="list-group-item project-item mb-2"
+      data-languages="{{join this.languages ',')}}"
+      data-concepts="{{join this.concepts ',')}}"
+      data-type="{{join this.type ',')}}"
+      data-tags="{{join this.tags ',')}}"
+    >
+      <h5 class="mb-1">{{this.name}}</h5>
+      <p class="mb-2">{{this.description}}</p>
+
+      <div class="small text-muted">
+        <strong>Languages:</strong>
+        {{#each this.languages}}
+          <span class="badge bg-secondary me-1">{{this}}</span>
+        {{/each}}
+      </div>
+
+      <div class="small text-muted mt-1">
+        <strong>Concepts:</strong>
+        {{#each this.concepts}}
+          <span class="badge bg-info me-1">{{this}}</span>
+        {{/each}}
+      </div>
+
+      <div class="small text-muted mt-1">
+        <strong>Type:</strong>
+        {{#each this.type}}
+          <span class="badge bg-dark me-1">{{this}}</span>
+        {{/each}}
+      </div>
+    </li>
+  {{/each}}
+</ul>

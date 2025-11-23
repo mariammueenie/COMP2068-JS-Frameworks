@@ -1,0 +1,33 @@
+{{!--
+  Contact page.
+  Currently this is a static form with a disabled submit button.
+  In the future, you could:
+  - Hook this up to an Express POST route
+  - Send emails via a service
+  - Or replace it with an Ionic form component.
+--}}
+
+<h1 class="mb-3">Contact Me</h1>
+<form class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Jane Doe</label>
+    <input class="form-control" type="text" placeholder="Your name">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">jane.doe@example.com</label>
+    <input class="form-control" type="email" placeholder="you@example.com">
+  </div>
+  <div class="col-12">
+    <label class="form-label">
+      Feel free to reach out! I’m always open to new opportunities and
+      collaborations. I’ll do my best to respond within 24 hours.
+    </label>
+    <textarea class="form-control" rows="5" placeholder="Say hello!"></textarea>
+  </div>
+  <div class="col-12">
+    {{!-- Functionality can be added later; left disabled on purpose. --}}
+    <button class="btn btn-primary" type="submit" disabled>
+      Submit (coming soon)
+    </button>
+  </div>
+</form>

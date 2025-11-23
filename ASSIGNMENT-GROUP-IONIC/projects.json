@@ -1,0 +1,333 @@
+[
+  {
+    "name": "Starlight Dashboard",
+    "description": "An interactive analytics dashboard that visualizes key metrics with charts and cards.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Data Visualization",
+      "Dashboard",
+      "Charts",
+      "Bootstrap"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Bootstrap",
+      "Charts",
+      "Dashboard",
+      "Data Visualization",
+      "Frontend",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "Student Manager API",
+    "description": "A RESTful API for managing students, courses, and grades with CRUD operations.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "REST API",
+      "CRUD",
+      "Routing",
+      "JSON"
+    ],
+    "type": [
+      "Backend",
+      "API"
+    ],
+    "tags": [
+      "API",
+      "Backend",
+      "CRUD",
+      "JSON",
+      "JavaScript",
+      "REST API",
+      "Routing"
+    ]
+  },
+  {
+    "name": "Nebula Notes",
+    "description": "A full-stack note-taking app with tagging, search, and responsive UI.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Fullstack",
+      "CRUD",
+      "Responsive Design"
+    ],
+    "type": [
+      "Fullstack"
+    ],
+    "tags": [
+      "CRUD",
+      "Fullstack",
+      "JavaScript",
+      "Responsive Design"
+    ]
+  },
+  {
+    "name": "Pixel Journal",
+    "description": "A creative journal app that lets users log entries with mood icons and simple styling.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Forms",
+      "Local Storage",
+      "UI/UX"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Forms",
+      "Frontend",
+      "JavaScript",
+      "Local Storage",
+      "UI/UX"
+    ]
+  },
+  {
+    "name": "Campus Events Hub",
+    "description": "A listing site for campus events with filters by date, category, and location.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Filtering",
+      "Search",
+      "DOM Manipulation"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "DOM Manipulation",
+      "Filtering",
+      "Frontend",
+      "JavaScript",
+      "Search"
+    ]
+  },
+  {
+    "name": "Portfolio 2.0 Backend",
+    "description": "A backend service that powers a portfolio website, serving projects from an API.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "REST API",
+      "Routing",
+      "Environment Variables"
+    ],
+    "type": [
+      "Backend",
+      "API"
+    ],
+    "tags": [
+      "API",
+      "Backend",
+      "Environment Variables",
+      "JavaScript",
+      "REST API",
+      "Routing"
+    ]
+  },
+  {
+    "name": "CineScout",
+    "description": "A movie search tool that fetches film data from a public API and displays results with details.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Fetch API",
+      "Async Programming",
+      "API Integration"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "API Integration",
+      "Async Programming",
+      "Fetch API",
+      "Frontend",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "TaskForge",
+    "description": "A task manager app that supports projects, due dates, and simple progress tracking.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Forms",
+      "CRUD",
+      "State Management (simple)"
+    ],
+    "type": [
+      "Fullstack"
+    ],
+    "tags": [
+      "CRUD",
+      "Forms",
+      "Fullstack",
+      "JavaScript",
+      "State Management (simple)"
+    ]
+  },
+  {
+    "name": "WeatherWindow",
+    "description": "A simple weather dashboard that shows current conditions for a chosen city.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "API Integration",
+      "Fetch API"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "API Integration",
+      "Fetch API",
+      "Frontend",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "Library Lookup CLI",
+    "description": "A command-line style interface (in the browser) for searching a small book dataset.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Search",
+      "Arrays & Objects",
+      "Filtering"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Arrays & Objects",
+      "Filtering",
+      "Frontend",
+      "JavaScript",
+      "Search"
+    ]
+  },
+  {
+    "name": "Recipe Notebook",
+    "description": "A recipe collection app where users can add, edit, and browse their favourite meals.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "CRUD",
+      "Forms",
+      "Local Storage"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "CRUD",
+      "Forms",
+      "Frontend",
+      "JavaScript",
+      "Local Storage"
+    ]
+  },
+  {
+    "name": "Budget Buddy",
+    "description": "A basic budgeting tool that tracks income and expenses with simple charts.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Data Visualization",
+      "Forms",
+      "Validation"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Data Visualization",
+      "Forms",
+      "Frontend",
+      "JavaScript",
+      "Validation"
+    ]
+  },
+  {
+    "name": "Study Tracker",
+    "description": "An app that logs study sessions by course and time spent, showing weekly summaries.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Date/Time",
+      "Data Aggregation"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Data Aggregation",
+      "Date/Time",
+      "Frontend",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "DevNotes Journal",
+    "description": "A developer-focused note app for saving code snippets and quick tips.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Text Handling",
+      "Tags",
+      "Search"
+    ],
+    "type": [
+      "Fullstack"
+    ],
+    "tags": [
+      "Fullstack",
+      "JavaScript",
+      "Search",
+      "Tags",
+      "Text Handling"
+    ]
+  },
+  {
+    "name": "UI Animation Playground",
+    "description": "A playground project for experimenting with simple UI animations and transitions.",
+    "languages": [
+      "JavaScript"
+    ],
+    "concepts": [
+      "Animations",
+      "CSS Transitions"
+    ],
+    "type": [
+      "Frontend"
+    ],
+    "tags": [
+      "Animations",
+      "CSS Transitions",
+      "Frontend",
+      "JavaScript"
+    ]
+  }
+]

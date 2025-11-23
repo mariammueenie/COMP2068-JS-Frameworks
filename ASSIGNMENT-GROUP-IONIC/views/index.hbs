@@ -1,0 +1,42 @@
+{{!--
+  Home page for the Jane Doe portfolio.
+  - The {{title}} variable is set in routes/index.js
+  - This page introduces Jane and links to her work via the navbar.
+--}}
+
+<section class="mb-4">
+  <h1 class="mb-3">{{title}}</h1>
+  <h3 class="mb-3">Jane Doe</h3>
+  <p class="lead">
+    Welcome to my portfolio. Here you can learn more about me,
+    explore some of my projects, and find ways to get in touch.
+  </p>
+</section>
+
+<section class="row g-3">
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">About Me</h5>
+        <p class="card-text">
+          Learn more about my background, programming experience,
+          and future goals.
+        </p>
+        <a href="/about" class="btn btn-outline-primary btn-sm">Go to About</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Projects</h5>
+        <p class="card-text">
+          Browse a selection of portfolio projects with filterable tags,
+          ready for Ionic-powered demos.
+        </p>
+        <a href="/projects" class="btn btn-outline-primary btn-sm">View Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
