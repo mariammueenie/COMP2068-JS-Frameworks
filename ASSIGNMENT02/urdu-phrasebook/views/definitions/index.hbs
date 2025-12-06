@@ -19,11 +19,15 @@
 {{#each definitions}}
 <div class="card mb-3">
   <div class="card-body">
+
     <h5 class="card-title">{{english}}</h5>
+
     <p class="card-text">
-      <strong>Urdu:</strong> {{urdu}}<br>
+      <strong>Roman Urdu:</strong> {{romanUrdu}}<br>
+      <strong>Urdu Script:</strong> {{urduScript}}<br>
+
       {{#if example}}
-        <em class="text-muted">Example: {{example}}</em>
+        <em class="text-muted">Example: {{example}}</em><br>
       {{/if}}
     </p>
 
@@ -32,3 +36,4 @@
   </div>
 </div>
 {{/each}}
+
