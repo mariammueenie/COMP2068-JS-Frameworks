@@ -8,7 +8,7 @@ const phraseSchema = new mongoose.Schema({
     trim: true,
     minlength: [1, 'English definition cannot be empty'],
     maxlength: [120, 'English definition can only be 120 characters']
-  },
+  }, 
   romanUrdu: {
     type: String,
     required: [true, 'Romanized is required'],
