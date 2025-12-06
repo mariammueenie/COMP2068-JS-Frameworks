@@ -1,0 +1,28 @@
+<h1>Search Results</h1>
+
+<form action="/definitions/search" method="GET" class="d-flex mb-4">
+  <input 
+    type="text" 
+    name="q"
+    class="form-control me-2"
+    placeholder="Search English word..."
+    value="{{q}}"
+  />
+  <button class="btn btn-grey">Search</button>
+</form>
+
+{{#each results}}
+<div class="card mb-3">
+  <div class="card-body">
+    <h5>{{english}}</h5>
+    <p><strong>Urdu:</strong> {{urdu}}</p>
+    {{#if example}}
+      <em>{{example}}</em>
+    {{/if}}
+  </div>
+</div>
+{{/each}}
+
+{{#unless results.length}}
+  <p class="text-muted">No results found.</p>
+{{/unless}}

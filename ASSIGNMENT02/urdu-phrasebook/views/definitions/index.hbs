@@ -1,14 +1,34 @@
-<h1>All Definitions</h1>
+{{!-- views/definitions/index.hbs --}}
 
-<a href="/definitions/add">Add New Definition</a>
+<h1 class="mb-4">All Definitions</h1>
 
-<ul>
-  {{#each definitions}}
-    <li>
-      <strong>{{english}}</strong> — {{urdu}}
+<div class="d-flex justify-content-between mb-3">
+  <a href="/definitions/add" class="btn btn-green">+ Add New</a>
+
+  <form action="/definitions/search" method="GET" class="d-flex">
+    <input 
+      type="text"
+      name="q"
+      placeholder="Search English word..."
+      class="form-control me-2"
+    />
+    <button class="btn btn-grey">Search</button>
+  </form>
+</div>
+
+{{#each definitions}}
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{english}}</h5>
+    <p class="card-text">
+      <strong>Urdu:</strong> {{urdu}}<br>
       {{#if example}}
-        <br><em>Example: {{example}}</em>
+        <em class="text-muted">Example: {{example}}</em>
       {{/if}}
-    </li>
-  {{/each}}
-</ul>
+    </p>
+
+    <a href="/definitions/edit/{{_id}}" class="btn btn-grey">Edit</a>
+    <a href="/definitions/delete/{{_id}}" class="btn btn-red">Delete</a>
+  </div>
+</div>
+{{/each}}

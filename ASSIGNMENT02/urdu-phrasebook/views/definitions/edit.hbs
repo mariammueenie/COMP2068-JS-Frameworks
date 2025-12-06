@@ -1,0 +1,15 @@
+<h1>Edit Definition</h1>
+
+<form action="/definitions/edit/{{definition._id}}" method="POST" class="mt-3">
+
+  <label class="form-label">English:</label>
+  <input type="text" name="english" class="form-control" value="{{definition.english}}" />
+
+  <label class="form-label mt-3">Urdu:</label>
+  <input type="text" name="urdu" class="form-control" value="{{definition.urdu}}" />
+
+  <label class="form-label mt-3">Example:</label>
+  <textarea name="example" class="form-control">{{definition.example}}</textarea>
+
+  <button class="btn btn-green mt-3">Update</button>
+</form>
