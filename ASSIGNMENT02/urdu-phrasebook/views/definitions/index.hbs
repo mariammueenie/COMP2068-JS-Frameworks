@@ -1,0 +1,14 @@
+<h1>All Definitions</h1>
+
+<a href="/definitions/add">Add New Definition</a>
+
+<ul>
+  {{#each definitions}}
+    <li>
+      <strong>{{english}}</strong> — {{urdu}}
+      {{#if example}}
+        <br><em>Example: {{example}}</em>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

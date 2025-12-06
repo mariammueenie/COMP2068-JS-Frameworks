@@ -1,0 +1,23 @@
+<h1>Add a New Definition</h1>
+
+<form action="/definitions/add" method="POST">
+
+  {{#if errors}}
+    <ul style="color:red;">
+      {{#each errors}}
+        <li>{{msg}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  <label>English Term:</label><br>
+  <input type="text" name="english" value="{{data.english}}" /><br><br>
+
+  <label>Urdu Meaning:</label><br>
+  <input type="text" name="urdu" value="{{data.urdu}}" /><br><br>
+
+  <label>Example (Optional):</label><br>
+  <textarea name="example">{{data.example}}</textarea><br><br>
+
+  <button type="submit">Save</button>
+</form>

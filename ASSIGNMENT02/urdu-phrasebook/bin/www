@@ -4,6 +4,8 @@
  * Module dependencies.
  */
 
+// MongoDB Connection handling 
+require('dotenv').config(); // load .env
 var app = require('../app');
 var debug = require('debug')('urdu-phrasebook:server');
 var http = require('http');
