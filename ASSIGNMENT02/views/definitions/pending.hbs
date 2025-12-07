@@ -1,0 +1,37 @@
+{{!-- Admin approval --}}
+
+<h1>Pending Definitions - Admin Approval</h1>
+
+{{#if definitions.length}}
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>English</th>
+      <th>Urdu</th>
+      <th>romanUrdu</th>
+      <th>Example</th>
+      <th>Submitted By</th>
+      <th>Actions</th>
+    </tr>
+
+    {{#each definitions}}
+      <tr>
+        <td>{{this.english}}</td>
+        <td>{{this.urdu}}</td>
+        <td>{{this.example}}</td>
+        <td>{{#if this.createdBy}}{{this.createdBy.username}}{{else}}N/A{{/if}}</td>
+
+        <td>
+          <form action="/definitions/{{this._id}}/approve" method="POST" style="display:inline;">
+            <button type="submit">Approve</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+
+{{else}}
+  <p>No pending items.</p>
+{{/if}}
+
+<p><a href="/definitions">Back to approved definitions</a></p>

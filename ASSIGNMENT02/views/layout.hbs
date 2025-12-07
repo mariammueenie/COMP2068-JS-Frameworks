@@ -28,9 +28,34 @@
   <nav class="navbar navbar-expand-lg px-3">
     <a class="navbar-brand text-white" href="/">Urdu Phrasebook</a>
 
+    {{#if currentUser}}
+    <a><span class="navbar-text text-white me-3">Welcome, {{currentUser.username}}!</span></a>
+    {{/if}}
+
     <div class="navbar-nav">
       <a class="nav-link" href="/definitions">Definitions</a>
+
+      {{!-- Hide "Add definition" button unless logged in --}}
+      {{#if currentUser}}
       <a class="nav-link" href="/definitions/add">Add Definition</a>
+      {{/if}}
+
+      {{!-- Hide "pending" dashboard unless admin --}}
+      {{#if isAdmin}}
+      <a class="nav-link" href="/definitions/pending">Pending Definitions</a>
+      {{/if}}
+
+      {{!-- If NOT logged in: show Login & Register --}}
+      {{#unless currentUser}}
+      <a class="nav-link" href="/users/login">Login</a>
+      <a class="nav-link" href="/users/register">Register</a>
+      {{/unless}}
+
+      {{!-- If logged in: show “Welcome, username” & Logout --}}
+      {{#if currentUser}}
+      <a class="nav-link" href="/users/logout">Logout</a>
+      {{/if}}
+
     </div>
   </nav>
 

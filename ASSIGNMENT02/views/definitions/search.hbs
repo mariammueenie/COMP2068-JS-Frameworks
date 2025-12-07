@@ -1,28 +1,45 @@
-<h1>Search Results</h1>
+<h1>Search Definitions</h1>
 
-<form action="/definitions/search" method="GET" class="d-flex mb-4">
-  <input 
-    type="text" 
-    name="q"
-    class="form-control me-2"
-    placeholder="Search English word..."
-    value="{{q}}"
-  />
-  <button class="btn btn-grey">Search</button>
+<form method="GET" action="/definitions/search">
+  <input type="text" name="q" placeholder="Search English..." value="{{q}}">
+  <button type="submit">Search</button>
 </form>
 
-{{#each results}}
-<div class="card mb-3">
-  <div class="card-body">
-    <h5>{{english}}</h5>
-    <p><strong>Urdu:</strong> {{urdu}}</p>
-    {{#if example}}
-      <em>{{example}}</em>
-    {{/if}}
-  </div>
-</div>
-{{/each}}
+{{#if results.length}}
+  <h2>Results</h2>
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>English</th>
+      <th>Urdu</th>
+      <th>Example</th>
 
-{{#unless results.length}}
-  <p class="text-muted">No results found.</p>
-{{/unless}}
+      {{#if isAdmin}}
+        <th>Actions</th>
+      {{/if}}
+    </tr>
+
+    {{#each results}}
+      <tr>
+        <td>{{this.english}}</td>
+        <td>{{this.urdu}}</td>
+        <td>{{this.example}}</td>
+
+        {{#if ../isAdmin}}
+        <td>
+          <a href="/definitions/edit/{{this._id}}">Edit</a> |
+          <a href="/definitions/delete/{{this._id}}"
+             onclick="return confirm('Delete this?');">Delete</a>
+        </td>
+        {{/if}}
+      </tr>
+    {{/each}}
+
+  </table>
+
+{{else}}
+  {{#if q}}
+    <p>No results found for "{{q}}".</p>
+  {{/if}}
+{{/if}}
+
+<p><a href="/definitions">Back to all definitions</a></p>

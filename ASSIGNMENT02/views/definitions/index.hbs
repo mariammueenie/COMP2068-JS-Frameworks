@@ -31,8 +31,12 @@
       {{/if}}
     </p>
 
-    <a href="/definitions/edit/{{_id}}" class="btn btn-grey">Edit</a>
-    <a href="/definitions/delete/{{_id}}" class="btn btn-red">Delete</a>
+  {{!-- Ensure edit and delete button can only be seen by admin --}}
+  {{#if isAdmin}}
+    <a href="/definitions/edit/{{_id}}">Edit</a>
+    <a href="/definitions/delete/{{_id}}">Delete</a>
+  {{/if}}
+
   </div>
 </div>
 {{/each}}

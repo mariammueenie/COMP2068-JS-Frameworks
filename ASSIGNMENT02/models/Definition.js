@@ -1,34 +1,50 @@
-// models/Phrase.js
+// models/Definition.js
 const mongoose = require('mongoose');
 
-const phraseSchema = new mongoose.Schema({
+const definitionSchema = new mongoose.Schema({
+  // English meaning / definition
   english: {
     type: String,
     required: [true, 'English definition is required'],
     trim: true,
     minlength: [1, 'English definition cannot be empty'],
     maxlength: [120, 'English definition can only be 120 characters']
-  }, 
-  romanUrdu: {
+  },
+
+  // Urdu (can be script, transliteration, etc, based on your form)
+  urdu: {
     type: String,
-    required: [true, 'Romanized is required'],
+    required: [true, 'Urdu definition is required'],
     trim: true,
-    minlength: [1, 'Romanized section cannot be empty'],
-    maxlength: [120, 'Romanized section must be at most 120 characters']
+    minlength: [1, 'Urdu definition cannot be empty'],
+    maxlength: [120, 'Urdu definition can only be 120 characters']
   },
-  urduScript: {
+
+  // Optional example sentence
+  example: {
     type: String,
     trim: true,
-    maxlength: [120, 'Urdu text can only be 120 characters']
+    maxlength: [250, 'Example must be at most 250 characters']
   },
-  tags: {
-    type: [String],
-    default: []
+
+  // 🔐 Approval status: user adds => "pending", admin changes => "approved"
+  status: {
+    type: String,
+    enum: ['pending', 'approved'],
+    default: 'pending'
   },
+
+  // Which user submitted this definition
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+
+  // Timestamp
   createdAt: {
     type: Date,
     default: Date.now
   }
 });
 
-module.exports = mongoose.model('Definition', phraseSchema);
+module.exports = mongoose.model('Definition', definitionSchema);

@@ -2,7 +2,7 @@
 
 {{#if errors}}
   <div class="alert alert-danger">
-    <ul>
+    <ul style="color:red">
       {{#each errors}}
         <li>{{msg}}</li>
       {{/each}}
@@ -12,17 +12,25 @@
 
 <form action="/definitions/add" method="POST" class="mt-3">
 
+<div>
   <label class="form-label">English:</label>
   <input type="text" name="english" class="form-control" value="{{data.english}}" />
+</div>
 
+<div>
   <label class="form-label mt-3">Urdu:</label>
   <input type="text" name="urdu" class="form-control" value="{{data.urdu}}" />
+</div>
 
+<div>
   <label class="form-label mt-3">Roman Urdu:</label>
   <input type="text" name="romanUrdu" class="form-control" value="{{data.romanUrdu}}" />
+</div>
 
+<div>
   <label class="form-label mt-3">Example (optional):</label>
   <textarea name="example" class="form-control">{{data.example}}</textarea>
+</div>
 
   <button class="btn btn-green mt-3">Save</button>
 </form>

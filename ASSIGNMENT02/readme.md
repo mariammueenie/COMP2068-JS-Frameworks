@@ -19,7 +19,7 @@ It supports:
 ## Tech Stack  
 | Area                 | Tools / Libraries             |
 |----------------------|-------------------------------|
-| Backend              | Node.js, Express              |
+| Backend              | Node.js, Express, BCrypt      |
 | Database             | MongoDB Atlas, Mongoose ODM   |
 | Templating / Views   | Handlebars (HBS)              |
 | CSS / UI             | Bootstrap                     |
