@@ -11,14 +11,20 @@ const definitionSchema = new mongoose.Schema({
     maxlength: [120, 'English definition can only be 120 characters']
   },
 
-  // Urdu (can be script, transliteration, etc, based on your form)
-  urdu: {
-    type: String,
-    required: [true, 'Urdu definition is required'],
-    trim: true,
-    minlength: [1, 'Urdu definition cannot be empty'],
-    maxlength: [120, 'Urdu definition can only be 120 characters']
-  },
+ // Romanized Urdu
+romanUrdu: {
+  type: String,
+  trim: true,
+  maxlength: [120, 'Romanized Urdu can only be 120 characters']
+},
+
+// Urdu script as separate field
+urduScript: {
+  type: String,
+  trim: true,
+  maxlength: [120, 'Urdu script can only be 120 characters']
+},
+
 
   // Optional example sentence
   example: {
@@ -27,7 +33,7 @@ const definitionSchema = new mongoose.Schema({
     maxlength: [250, 'Example must be at most 250 characters']
   },
 
-  // 🔐 Approval status: user adds => "pending", admin changes => "approved"
+  // Approval status: user adds => "pending", admin changes => "approved"
   status: {
     type: String,
     enum: ['pending', 'approved'],

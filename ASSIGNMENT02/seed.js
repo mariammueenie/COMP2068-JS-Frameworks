@@ -6,7 +6,7 @@
 // SEED SCRIPT FOR URDU DEFINITIONS
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Definition = require('../models/Definition');
+const Definition = require('./models/Definition');
 
 // sample data to insert
 const seedData = [
@@ -73,9 +73,17 @@ async function seed() {
     await Definition.deleteMany({});
 
     console.log("Inserting new seed data...");
-    await Definition.insertMany(seedData);
+    await Definition.insertMany(
+      seedData.map(item => ({
+        english: item.english,
+        urdu: item.urduScript,
+        romanUrdu: item.romanUrdu,
+        example: item.example,
+        status: "approved"
+      }))
+    );
 
-    console.log("🌱 Seed complete!");
+    console.log("Seed complete!");
     process.exit(0);
 
   } catch (err) {
