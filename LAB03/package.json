@@ -1,0 +1,23 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Simple Calculator app using Node.js and Connect",
+  "homepage": "https://github.com/mariammueenie/COMP2068-JS-Frameworks#readme",
+  "bugs": {
+    "url": "https://github.com/mariammueenie/COMP2068-JS-Frameworks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariammueenie/COMP2068-JS-Frameworks.git"
+  },
+  "license": "ISC",
+  "author": "Mariam Mueen",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "connect": "^3.7.0"
+  }
+}
