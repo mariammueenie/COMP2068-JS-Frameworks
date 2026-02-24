@@ -20,11 +20,17 @@ var app = express();
 // ===============================
 // SESSION MIDDLEWARE (AUTH CORE)
 // ===============================
+
+app.set('trust proxy', 1); // important on Render
+
 app.use(
   session({
-    secret: 'super-secret-session-key', // in a real app, move to process.env
+    secret: process.env.SESSION_SECRET || 'dev-only-secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production'
+    }
   })
 );
 

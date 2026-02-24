@@ -76,7 +76,7 @@ async function seed() {
     await Definition.insertMany(
       seedData.map(item => ({
         english: item.english,
-        urdu: item.urduScript,
+        urduScript: item.urduScript,
         romanUrdu: item.romanUrdu,
         example: item.example,
         status: "approved"
