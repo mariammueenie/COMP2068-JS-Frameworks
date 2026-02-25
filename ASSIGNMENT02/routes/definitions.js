@@ -142,8 +142,10 @@ router.get('/delete/:id', isAdmin, async (req, res) => {
 // List ONLY APPROVED definitions
 // ===============================
 router.get('/', async (req, res) => {
+
+  //{temp removed .find{{ status: 'approved' }}.sort
   try {
-    const definitions = await Definition.find({ status: 'approved' }).sort({ english: 1 });
+    const definitions = await Definition.find({}).sort({ english: 1 });
 
     // For admin-only buttons in the view
     const isAdminView = !!(req.session?.user?.role === 'admin');
