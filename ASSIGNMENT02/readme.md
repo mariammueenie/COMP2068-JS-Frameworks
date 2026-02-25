@@ -1,6 +1,6 @@
 # Urdu Phrasebook — Assignment 02 (COMP2068 JS Frameworks)
 
-**Live site:** https://comp2068-assignment-02-urdu-phrasebook.onrender.com/definitions
+**Live site:** https://englishurdudictionary.onrender.com/definitions
 
 ## Admin Login (For Instructor / Grading)
 
