@@ -151,6 +151,11 @@ router.get('/', async (req, res) => {
     // Debug: confirms the query is returning docs
     console.log("APPROVED COUNT:", definitions.length);
 
+    // Print approved "total documents" in logs
+    const total = await Definition.countDocuments({});
+    const approved = await Definition.countDocuments({ status: 'approved' });
+    console.log("TOTAL:", total, "APPROVED:", approved);
+
     res.render('definitions/index', { definitions, isAdmin: isAdminView });
   } catch (err) {
     console.error(err);
