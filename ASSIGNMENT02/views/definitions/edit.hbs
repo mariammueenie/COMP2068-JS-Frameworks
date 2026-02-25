@@ -6,7 +6,10 @@
   <input type="text" name="english" class="form-control" value="{{definition.english}}" />
 
   <label class="form-label mt-3">Urdu:</label>
-  <input type="text" name="urdu" class="form-control" value="{{definition.urdu}}" />
+  <input type="text" name="urduScript" class="form-control" value="{{definition.urduScript}}" />
+
+  <label class="form-label mt-3">Roman Urdu:</label>
+  <input type="text" name="romanUrdu" class="form-control" value="{{definition.romanUrdu}}" />
 
   <label class="form-label mt-3">Example:</label>
   <textarea name="example" class="form-control">{{definition.example}}</textarea>
@@ -15,4 +18,4 @@
 </form>
 
 {{!-- Automatically route non-admin users back to definitions --}}
-<p><a href="definitions">Back to Definitions</a></p>
+<p><a href="/definitions">Back to Definitions</a></p>

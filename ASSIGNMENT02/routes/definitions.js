@@ -111,7 +111,8 @@ router.post('/edit/:id', isAdmin, async (req, res) => {
   try {
     await Definition.findByIdAndUpdate(req.params.id, {
       english: req.body.english,
-      urdu: req.body.urdu,
+      urduScript: req.body.urduScript,
+      romanUrdu: req.body.romanUrdu,
       example: req.body.example
     });
 
@@ -142,10 +143,15 @@ router.get('/delete/:id', isAdmin, async (req, res) => {
 // ===============================
 router.get('/', async (req, res) => {
   try {
-    const definitions = await Definition.find({ status: 'approved' })
-      .sort({ english: 1 });
+    const definitions = await Definition.find({ status: 'approved' }).sort({ english: 1 });
 
-    res.render('definitions/index', { definitions });
+    // For admin-only buttons in the view
+    const isAdminView = !!(req.session?.user?.role === 'admin');
+
+    // Debug: confirms the query is returning docs
+    console.log("APPROVED COUNT:", definitions.length);
+
+    res.render('definitions/index', { definitions, isAdmin: isAdminView });
   } catch (err) {
     console.error(err);
     res.status(500).send('Error fetching definitions');
@@ -174,19 +180,22 @@ router.post(
     .notEmpty()
     .withMessage('English term is required.'),
 
-  body('urdu')
+  body('urduScript')
     .trim()
     .notEmpty()
     .withMessage('Urdu definition is required.'),
 
   body('example').trim().optional(),
 
+  body('romanUrdu').trim().optional(),
+
   async (req, res) => {
     const errors = validationResult(req);
 
     const data = {
       english: req.body.english,
-      urdu: req.body.urdu,
+      urduScript: req.body.urduScript,
+      romanUrdu: req.body.romanUrdu,
       example: req.body.example
     };
 

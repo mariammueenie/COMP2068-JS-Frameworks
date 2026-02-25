@@ -6,16 +6,21 @@
   <a href="/definitions/add" class="btn btn-green">+ Add New</a>
 
   <form action="/definitions/search" method="GET" class="d-flex">
-    <input 
-      type="text"
-      name="q"
-      placeholder="Search English word..."
-      class="form-control me-2"
-    />
+    <input type="text" name="q" placeholder="Search English word..." class="form-control me-2" />
     <button class="btn btn-grey">Search</button>
   </form>
 </div>
 
+{{!-- DEBUG/UX: show how many items are being rendered --}}
+<p class="text-muted">Showing {{definitions.length}} definitions</p>
+
+{{#unless definitions.length}}
+<div class="alert alert-warning">No approved definitions found.</div>
+{{/unless}}
+
+{{!-- <p class="text-muted">Showing {{definitions.length}} definitions</p> --}}
+
+{{#if definitions.length}}
 {{#each definitions}}
 <div class="card mb-3">
   <div class="card-body">
@@ -23,21 +28,27 @@
     <h5 class="card-title">{{english}}</h5>
 
     <p class="card-text">
+      {{!-- Only show if the field exists --}}
+      {{#if romanUrdu}}
       <strong>Roman Urdu:</strong> {{romanUrdu}}<br>
+      {{/if}}
+
       <strong>Urdu Script:</strong> {{urduScript}}<br>
 
       {{#if example}}
-        <em class="text-muted">Example: {{example}}</em><br>
+      <em class="text-muted">Example: {{example}}</em><br>
       {{/if}}
     </p>
 
-  {{!-- Ensure edit and delete button can only be seen by admin --}}
-  {{#if isAdmin}}
+    {{!-- Admin-only controls (requires isAdmin to be passed from route) --}}
+    {{#if ../isAdmin}}
     <a href="/definitions/edit/{{_id}}">Edit</a>
     <a href="/definitions/delete/{{_id}}">Delete</a>
-  {{/if}}
+    {{/if}}
 
   </div>
 </div>
 {{/each}}
-
+{{else}}
+<div class="alert alert-warning">No approved definitions found.</div>
+{{/if}}

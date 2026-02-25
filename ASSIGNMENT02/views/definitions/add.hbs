@@ -1,6 +1,6 @@
 <h1>Add Definition</h1>
 
-{{#if errors}}
+{{#if errors.length}}
   <div class="alert alert-danger">
     <ul style="color:red">
       {{#each errors}}
@@ -19,7 +19,7 @@
 
 <div>
   <label class="form-label mt-3">Urdu:</label>
-  <input type="text" name="urdu" class="form-control" value="{{data.urdu}}" />
+  <input type="text" name="urduScript" class="form-control" value="{{data.urduScript}}" />
 </div>
 
 <div>
