@@ -3,6 +3,9 @@ name: Build and deploy Node.js app to Azure Web App - MariamMPortfolio
 on:
   push:
     branches: [ main ]
+    paths:
+          - "ASSIGNMENT01/**"
+          - ".github/workflows/ASSIGNMENT01.yml"
   workflow_dispatch:
 
 jobs:
